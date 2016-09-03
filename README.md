@@ -8,6 +8,23 @@
 
 线下yum源
 
+## 安装方法：
+
+修改config.cfg中
+
+```
+CONFIGSERVER_IP="192.168.1.244"    ## Need to check
+CONFIGSERVER_PORT="8081"                ## Need to check
+```
+
+启动
+
+```
+./run.sh
+```
+
+## 使用方法：
+
 install repo command:
 
 ```
