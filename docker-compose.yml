@@ -1,7 +1,0 @@
-configserver:
-  image: demoregistry.dataman-inc.com/library/centos7-nginx-1.8.0:latest
-  net: host
-  volumes:
-    - ./conf.d:/etc/nginx/conf.d
-    - ./config:/data/config
-    - ./packages:/data/packages
