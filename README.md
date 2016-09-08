@@ -10,7 +10,7 @@
 
 ## 安装方法：
 
-修改config.cfg中
+修改../config.cfg中
 
 ```
 CONFIGSERVER_IP="192.168.1.244"    ## Need to check
