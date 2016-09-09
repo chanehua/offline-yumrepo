@@ -17,5 +17,5 @@ echo "curl -o /usr/local/bin/docker-compose http://$CONFIGSERVER_IP:$CONFIGSERVE
 echo
 
 
-grep offline-yumrepo /etc/rc.local || echo "/bin/bash /data/sry3/offline-yumrepo/run.sh" >> /etc/rc.local
+grep offline-yumrepo /etc/rc.local || echo "/bin/bash /data/offlinesry/offline-yumrepo/run.sh" >> /etc/rc.local
 ps aux|grep "SimpleHTTPServer $CONFIGSERVER_PORT"|grep -v grep|wc -l|grep 1 || nohup python -m SimpleHTTPServer $CONFIGSERVER_PORT 1>/tmp/sry_yumrepo.log 2>&1 &
