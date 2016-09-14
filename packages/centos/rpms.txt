@@ -21,6 +21,7 @@ iproute-3.10.0-54.el7.x86_64.rpm
 iptables-1.4.21-16.el7.i686.rpm
 iptables-1.4.21-16.el7.x86_64.rpm
 iptables-services-1.4.21-16.el7.x86_64.rpm
+ipvsadm-1.27-7.el7.x86_64.rpm
 jq-1.5-1.el7.x86_64.rpm
 kernel-3.10.0-327.13.1.el7.x86_64.rpm
 kernel-tools-3.10.0-327.13.1.el7.x86_64.rpm
@@ -34,6 +35,7 @@ libnetfilter_conntrack-1.0.4-2.el7.i686.rpm
 libnetfilter_conntrack-1.0.4-2.el7.x86_64.rpm
 libnfnetlink-1.0.1-4.el7.i686.rpm
 libnfnetlink-1.0.1-4.el7.x86_64.rpm
+libnl3-3.2.21-10.el7.x86_64.rpm
 libpcap-1.5.3-8.el7.x86_64.rpm
 libseccomp-2.2.1-1.el7.x86_64.rpm
 libselinux-python-2.2.2-6.el7.x86_64.rpm
@@ -116,9 +118,9 @@ socat-1.7.2.2-5.el7.x86_64.rpm
 sshpass-1.05-5.el7.x86_64.rpm
 strace-4.8-11.el7.x86_64.rpm
 sysstat-10.1.5-7.el7.x86_64.rpm
-systemd-219-19.el7_2.7.x86_64.rpm
-systemd-libs-219-19.el7_2.7.x86_64.rpm
-systemd-sysv-219-19.el7_2.7.x86_64.rpm
+systemd-219-19.el7_2.12.x86_64.rpm
+systemd-libs-219-19.el7_2.12.x86_64.rpm
+systemd-sysv-219-19.el7_2.12.x86_64.rpm
 sysvinit-tools-2.88-14.dsf.el7.x86_64.rpm
 telnet-0.17-59.el7.x86_64.rpm
 zabbix-2.4.7-1.el6.x86_64.rpm
