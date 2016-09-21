@@ -18,7 +18,7 @@ echo "yum install command:" | tee -a yum_repo_readme.txt
 echo "yum --disablerepo=\* --enablerepo=offlineshurenyunrepo install -y PACKAGE_NAME" | tee -a yum_repo_readme.txt
 echo "" | tee -a yum_repo_readme.txt
 echo "install docker-compose:" | tee -a yum_repo_readme.txt
-echo "curl -o /usr/local/bin/docker-compose http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/config/docker-compose-1.8.0/docker-compose"
+echo "curl -o /usr/bin/docker-compose http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/config/docker-compose-1.8.0/docker-compose"
 echo
 
 
