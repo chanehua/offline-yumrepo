@@ -4,7 +4,7 @@ cd $base_dir
 . ../config.cfg
 
 grep offline-yumrepo /etc/rc.local || echo "/bin/bash /data/offlinesry/offline-yumrepo/run.sh" >> /etc/rc.local
-ps aux|grep "SimpleHTTPServer $CONFIGSERVER_PORT"|grep -v grep|wc -l|grep 1 || nohup python -m SimpleHTTPServer $CONFIGSERVER_PORT 1>/tmp/sry_yumrepo.log 2>&1 &
+ps aux|grep "MultithreadedSimpleHTTPServer"|grep -v grep|wc -l|grep 1 || nohup ./MultithreadedSimpleHTTPServer.py $CONFIGSERVER_PORT 1>/tmp/sry_yumrepo.log 2>&1 &
 
 sleep 2
 curl -Ls http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/packages/centos/get_repo.sh|bash -s $CONFIGSERVER_IP:$CONFIGSERVER_PORT
