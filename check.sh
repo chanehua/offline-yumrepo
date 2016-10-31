@@ -5,11 +5,4 @@ cd $base_dir
 
 . ../config.cfg
 
-function check_port(){
-	name=$1
-	port=$2
-	netstat -lntp|grep $port &>/dev/null  && echo "$name is ok" || (echo "$name is error";exit 1)
-}
-
-check_port yumrepo $CONFIGSERVER_PORT
-
+curl -s -o /dev/null -w "%{http_code}" --connect-timeout 10 http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/|grep 200
