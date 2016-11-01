@@ -4,9 +4,9 @@ import socket
 import SocketServer
 import BaseHTTPServer
 from SimpleHTTPServer import SimpleHTTPRequestHandler
-import signal
+#import signal
 
-signal.signal(signal.SIGCHLD,signal.SIG_IGN)
+#signal.signal(signal.SIGCHLD,signal.SIG_IGN)
 
 class ForkingHTTPServer(SocketServer.ForkingTCPServer):
 
