@@ -17,7 +17,7 @@ echo "install repo command:"|tee -a yum_repo_readme.txt
 echo "curl -Ls http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/packages/centos/get_repo.sh|bash -s $CONFIGSERVER_IP:$CONFIGSERVER_PORT"|tee -a yum_repo_readme.txt
 echo "" | tee -a yum_repo_readme.txt 
 echo "yum install command:" | tee -a yum_repo_readme.txt
-echo "yum --disablerepo=\* --enablerepo=offlineshurenyunrepo install -y PACKAGE_NAME" | tee -a yum_repo_readme.txt
+echo "yum --disablerepo=\* --enablerepo=offlineshurenyunrepo install -y <PACKAGE_NAME>" | tee -a yum_repo_readme.txt
 echo "" | tee -a yum_repo_readme.txt
 echo "install docker-compose:" | tee -a yum_repo_readme.txt
 echo "curl -o /usr/bin/docker-compose http://$CONFIGSERVER_IP:$CONFIGSERVER_PORT/config/docker-compose-1.8.0/docker-compose"
