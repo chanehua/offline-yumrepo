@@ -2,9 +2,9 @@
 set -e
 base_dir=$(cd `dirname $0` && pwd)
 cd $base_dir
-. ../config.cfg
+. ../offlinesry/config.cfg
 
-grep offline-yumrepo /etc/rc.local || echo "/bin/bash /data/offlinesry/offline-yumrepo/run.sh" >> /etc/rc.local
+grep offline-yumrepo /etc/rc.local || echo "/bin/bash /data/offline-yumrepo/run.sh" >> /etc/rc.local
 chmod +x /etc/rc.local
 ps aux|grep "ForkStaticServer"|grep -v grep|wc -l|grep 1 || nohup ./ForkStaticServer.py $CONFIGSERVER_PORT 1>/tmp/sry_yumrepo.log 2>&1 &
 
