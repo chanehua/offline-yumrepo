@@ -1,3 +1,6 @@
 *.rpm
 *.deb
+packages/centos/7/x86_64/repodata
+packages/centos/7/x86_64/.repodata
+packages/centos/7/x86_64/RPMS
 yum_repo_readme.txt
