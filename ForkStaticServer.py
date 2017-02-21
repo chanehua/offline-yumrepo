@@ -1,8 +1,8 @@
-#!/bin/env python
+#!/usr/bin/env python
 
 import socket
 import SocketServer
-import BaseHTTPServer
+import sys
 from SimpleHTTPServer import SimpleHTTPRequestHandler
 
 class ForkingHTTPServer(SocketServer.ForkingTCPServer):
@@ -16,11 +16,31 @@ class ForkingHTTPServer(SocketServer.ForkingTCPServer):
        self.server_name = socket.getfqdn(host)
        self.server_port = port
 
+def run(HandlerClass = SimpleHTTPRequestHandler,
+         ServerClass = ForkingHTTPServer, protocol="HTTP/1.0"):
 
-def main(HandlerClass=SimpleHTTPRequestHandler,
-        ServerClass=ForkingHTTPServer):
-   BaseHTTPServer.test(HandlerClass, ServerClass)
+    host = ''
+    port = 8001
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
+        if ':' in arg:
+            host, port = arg.split(':')
+            port = int(port)
+        else:
+            try:
+                port = int(sys.argv[1])
+            except:
+                host = sys.argv[1]
+
+    server_address = (host, port)
+
+    HandlerClass.protocol_version = protocol
+    httpd = ServerClass(server_address, HandlerClass)
+
+    sa = httpd.socket.getsockname()
+    print "Serving HTTP on", sa[0], "port", sa[1], "..."
+    httpd.serve_forever()
 
 
 if __name__ == '__main__':
-   main()
+    run() 
